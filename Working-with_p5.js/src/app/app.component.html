@@ -1,0 +1,42 @@
+<ion-app>
+	<!--
+		<ion-split-pane contentId="main-content">
+	-->
+	<ion-menu contentId="main-content" type="overlay">
+		<ion-header>
+			<ion-toolbar>
+				<ion-buttons slot="start">
+					<ion-menu-button></ion-menu-button>
+				</ion-buttons>
+				<ion-buttons slot="start">
+					<ion-menu-button></ion-menu-button>
+				</ion-buttons>
+				<ion-title>Menu</ion-title>
+			</ion-toolbar>
+		</ion-header>
+		<ion-content>
+			<div class="container" id="my-content">
+				<ul>
+					<li class="dropdown" *ngFor="let menu1 of appMenu" id="menu1">
+						<input type="checkbox" />
+
+						<a href="#" data-toggle="dropdown">{{ menu1.name }}</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let menu2 of menu1.items">
+								<ion-item (click)="onClick($event)" [routerDirection]="'root'"
+									[routerLink]="[menu2.url]">
+									<ion-icon slot="start" [name]="menu2.icon"></ion-icon>
+									<ion-label>{{menu2.name}} </ion-label>
+								</ion-item>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</ion-content>
+	</ion-menu>
+	<ion-router-outlet id="main-content"></ion-router-outlet>
+	<!--
+		</ion-split-pane>
+	-->
+</ion-app>

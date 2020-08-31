@@ -1,0 +1,38 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+
+		<ion-title>
+			Home
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-button expand="block" (click)="stepSelectDOM()">Select</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button expand="block" (click)="stepCreateCanvas()">Create</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button expand="block" (click)="stepRemoveCanvas()">Remove</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button expand="block" (click)="stepP5Draw()">Draw</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button expand="block" (click)="stepDestroy()">Destroy</ion-button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<div id="p5-container" class="p5-container"></div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

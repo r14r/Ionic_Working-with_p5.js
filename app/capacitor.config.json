@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.app",
+  "appName": "app_working_with_p5js",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
