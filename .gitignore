@@ -1,4 +1,9 @@
+**/.env.d
+
 www/
 .env/
 
 .env
+**/.env.d
+**/.env
+
